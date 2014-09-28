@@ -7,7 +7,7 @@ class Stack:
     def push(self,item):
         self.items.append(item);
     def pop(self):
-        if self.items is not None:
+        if not isEmpty(self.items):
             return self.items.pop();
         else:
             return None

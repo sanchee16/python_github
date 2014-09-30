@@ -1,4 +1,4 @@
-#this code uses stack to reverse a string. In case there is a delimiter it takes delimiter also as a part of string and reverses the complete string.
+#this code uses stack to reverse a string. In case there is a delimiter, it takes delimiter also as a part of string and reverses the complete string.
 from Stack import *
 
 def revrse(expr):

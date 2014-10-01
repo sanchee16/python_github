@@ -2,13 +2,13 @@
 from Stack import *
 
 #function to check whether the corresponding values form a parenthesis pair.
-def match(val1,val2):
+def match(val1):
+	val2=None
 	dic={"lpar1":"rpar1","lpar2":"rpar2","lpar3":"rpar3"};
 	for key,value in dic.items():
-		if key==val1 and value==val2 :
-			return True
-		else:
-			return False
+		if key==val1:
+			val2=value
+	return val2
 
 #function to find the type of paranthesis
 def typeOfPara(exp):
@@ -38,11 +38,12 @@ def balanced(expr):
 	stck=Stack()
 	for each in expr:
 		if typeOfPara(each) is "lpar1" or typeOfPara(each) is "lpar2" or typeOfPara(each) is "lpar3":
-			stck.push(each)
+			typ=typeOfPara(each)
+			stck.push(typ)
 		elif typeOfPara(each) is "rpar1" or typeOfPara(each) is "rpar2" or typeOfPara(each) is "rpar3":
 			typ=typeOfPara(each)
 			spop=stck.pop()
-			if match(spop,typ)==True:
+			if match(spop)==typ:
 				continue
 			else:
 				break

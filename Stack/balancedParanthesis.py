@@ -3,11 +3,8 @@ from Stack import *
 
 #function to return the corresponding value of a parenthesis pair.
 def match(val1):
-	val2=None
 	dic={"lpar1":"rpar1","lpar2":"rpar2","lpar3":"rpar3"};
-	for key,value in dic.items():
-		if key==val1:
-			val2=value
+	val2=dic.get(val1,None)
 	return val2
 
 #function to find the type of paranthesis

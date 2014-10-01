@@ -1,7 +1,7 @@
 #The code is used to find if a given sequence of paranthesis is balanced or not.
 from Stack import *
 
-#function to check whether the corresponding values form a parenthesis pair.
+#function to return the corresponding value of a parenthesis pair.
 def match(val1):
 	val2=None
 	dic={"lpar1":"rpar1","lpar2":"rpar2","lpar3":"rpar3"};

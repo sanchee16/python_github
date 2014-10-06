@@ -1,5 +1,5 @@
 #using Stack from Stack.py to convert infix expression to postfix expression
-
+#TODO incorporate /0 and %0 not valid
 from Stack import *
 
 #Calculates the precedence of an operator
